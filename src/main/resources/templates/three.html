@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<tr th:each="user , userStat : ${list}">
+    <td th:text="${user.id}"></td><br>
+    <td th:text="${user.name}"></td><br>
+    <td th:text="${#dates.format(user.brithday,'yyyy-MM-dd HH:mm:ss')}"></td><br>
+    <td th:text="${userStat.index}"></td><br>
+    <td th:text="${userStat.count}"></td><br>
+
+    <span th:text="|welcome : ${user.name } |"></span><br>
+
+    <h1 th:if="${flag eq true}">HHHHHHHHHH</h1>
+    <h1 th:unless="${flag eq false}">HHHHwwwwwwwwwwHHHHHH</h1>
+</tr>
+
+</body>
+</html>

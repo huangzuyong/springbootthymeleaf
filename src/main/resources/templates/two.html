@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img th:src="${map.aa}"/><br>
+<span th:text="${user.id}"></span><br>
+<span th:text="${user.name}"></span><br>
+<span th:text="${#dates.format(user.brithday,'yyyy-MM-dd HH:mm:ss')}"></span>
+
+</body>
+</html>
